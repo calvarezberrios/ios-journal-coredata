@@ -11,6 +11,7 @@ class CreateEntryViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var moodSegmentedControl: UISegmentedControl!
     
     var entryController: EntryController?
     var entry: Entry?

@@ -98,12 +98,20 @@
                                 <rect key="frame" x="8" y="104" width="398" height="292"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Journal Entry Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cg7-5a-eWd">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-uV-5dv">
+                                        <rect key="frame" x="0.0" y="37" width="398" height="32"/>
+                                        <segments>
+                                            <segment title="😀"/>
+                                            <segment title="😐"/>
+                                            <segment title="😞"/>
+                                        </segments>
+                                    </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-lQ-jSx">
-                                        <rect key="frame" x="0.0" y="59" width="398" height="233"/>
+                                        <rect key="frame" x="0.0" y="83" width="398" height="209"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-ry-QgD">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="20.333333333333332"/>
@@ -119,7 +127,7 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2r-EH-qnv">
-                                                <rect key="frame" x="0.0" y="38.333333333333357" width="398" height="194.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="38.333333333333343" width="398" height="170.66666666666666"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -153,6 +161,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bodyTextView" destination="d2r-EH-qnv" id="Rwk-At-ike"/>
+                        <outlet property="moodSegmentedControl" destination="cTZ-uV-5dv" id="K29-W0-zmY"/>
                         <outlet property="titleTextField" destination="cg7-5a-eWd" id="zOc-bV-IGC"/>
                     </connections>
                 </viewController>
