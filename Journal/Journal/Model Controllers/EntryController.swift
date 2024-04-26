@@ -9,14 +9,15 @@ import Foundation
 import CoreData
 
 class EntryController {
-    func createEntry(with title: String, body: String, context: NSManagedObjectContext) {
+    func createEntry(with title: String, mood: Mood, body: String, context: NSManagedObjectContext) {
         
-        Entry(title: title, bodyText: body, context: context)
+        Entry(title: title, mood: mood, bodyText: body, context: context)
         CoreDataStack.shared.saveToPersistentStore()
     }
     
-    func updateEntry(entry: Entry, with title: String, body: String) {
+    func updateEntry(entry: Entry, with title: String, mood: Mood, body: String) {
         entry.title = title
+        entry.mood = mood.rawValue
         entry.bodyText = body
         CoreDataStack.shared.saveToPersistentStore()
     }

@@ -26,6 +26,11 @@ class CreateEntryViewController: UIViewController {
         if let entry = entry {
             titleTextField.text = entry.title
             bodyTextView.text = entry.bodyText
+            
+            if let mood = Mood(rawValue: entry.mood ?? "😐"),
+               let index = Mood.allCases.firstIndex(of: mood) {
+                moodSegmentedControl.selectedSegmentIndex = index
+            }
         }
     }
     
@@ -37,10 +42,14 @@ class CreateEntryViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         if let title = titleTextField.text, !title.isEmpty,
            let body = bodyTextView.text, !body.isEmpty {
+            
+            let moodIndex = moodSegmentedControl.selectedSegmentIndex
+            let mood = Mood.allCases[moodIndex]
+            
             if let entry = entry {
-                entryController?.updateEntry(entry: entry, with: title, body: body)
+                entryController?.updateEntry(entry: entry, with: title, mood: mood, body: body)
             } else {
-                entryController?.createEntry(with: title, body: body, context: CoreDataStack.shared.mainContext)
+                entryController?.createEntry(with: title, mood: mood, body: body, context: CoreDataStack.shared.mainContext)
             }
             
             dismiss(animated: true)
