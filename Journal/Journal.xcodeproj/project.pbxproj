@@ -18,6 +18,7 @@
 		39958F0B2BDAB62100DBCFAB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39958F0A2BDAB62100DBCFAB /* CoreDataStack.swift */; };
 		39958F0D2BDAB65900DBCFAB /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39958F0C2BDAB65900DBCFAB /* Entry+Convenience.swift */; };
 		39958F182BDAE1D200DBCFAB /* Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39958F162BDAE1D200DBCFAB /* Journal.xcdatamodeld */; };
+		39958F1A2BDAF12100DBCFAB /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39958F192BDAF12100DBCFAB /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		39958F0A2BDAB62100DBCFAB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		39958F0C2BDAB65900DBCFAB /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
 		39958F172BDAE1D200DBCFAB /* Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Journal.xcdatamodel; sourceTree = "<group>"; };
+		39958F192BDAF12100DBCFAB /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,6 @@
 		39958EFE2BDAB53A00DBCFAB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				39958F162BDAE1D200DBCFAB /* Journal.xcdatamodeld */,
 				39958EF22BDAB51E00DBCFAB /* Assets.xcassets */,
 				39958EF72BDAB51E00DBCFAB /* Info.plist */,
 			);
@@ -125,6 +126,7 @@
 		39958F022BDAB57000DBCFAB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				39958F162BDAE1D200DBCFAB /* Journal.xcdatamodeld */,
 				39958F0A2BDAB62100DBCFAB /* CoreDataStack.swift */,
 				39958F0C2BDAB65900DBCFAB /* Entry+Convenience.swift */,
 			);
@@ -134,6 +136,7 @@
 		39958F032BDAB58100DBCFAB /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				39958F192BDAF12100DBCFAB /* EntryController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				39958F072BDAB5E000DBCFAB /* EntriesTableViewController.swift in Sources */,
 				39958F092BDAB5F300DBCFAB /* EntryTableViewCell.swift in Sources */,
 				39958EEA2BDAB51C00DBCFAB /* AppDelegate.swift in Sources */,
+				39958F1A2BDAF12100DBCFAB /* EntryController.swift in Sources */,
 				39958F0B2BDAB62100DBCFAB /* CoreDataStack.swift in Sources */,
 				39958F052BDAB5C200DBCFAB /* CreateEntryViewController.swift in Sources */,
 				39958EEC2BDAB51C00DBCFAB /* SceneDelegate.swift in Sources */,

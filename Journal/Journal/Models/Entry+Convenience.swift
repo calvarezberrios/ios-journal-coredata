@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 extension Entry {
-    convenience init(id: String = UUID().uuidString, title: String, bodyText: String, timeStamp: Date = Date(), context: NSManagedObjectContext) {
+    @discardableResult convenience init(id: String = UUID().uuidString, title: String, bodyText: String, timeStamp: Date = Date(), context: NSManagedObjectContext) {
         self.init(context: context)
         self.id = id
         self.title = title
